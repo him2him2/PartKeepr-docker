@@ -9,7 +9,8 @@ RUN docker-php-ext-configure ldap && docker-php-ext-install ldap
 RUN docker-php-ext-configure bcmath && docker-php-ext-install bcmath 
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/freetype2 && docker-php-ext-install gd 
 RUN docker-php-ext-install opcache intl dom pdo pdo_mysql pdo_pgsql 
-RUN pecl install xdebug && docker-php-ext-enable xdebug
+RUN pecl install xdebug 
+RUN docker-php-ext-enable xdebug
 RUN pecl install apcu_bc-beta 
 RUN docker-php-ext-enable apcu apc 
 RUN mv /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini /usr/local/etc/php/conf.d/10-docker-php-ext-apcu.ini 
