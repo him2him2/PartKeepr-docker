@@ -2,7 +2,7 @@ FROM php:7.1-apache-buster
 
 RUN apt-get update 
 RUN apt-get upgrade -y 
-RUN apt-get install -y sudo software-properties-common curl wget git unzip libldap2-dev libpng++-dev libicu-dev libcurl4-gnutls-dev libxml2-dev libpq-dev libfreetype6-dev nano less vim php-pear
+RUN apt-get install -y sudo  curl wget git unzip libldap2-dev libpng++-dev libicu-dev libcurl4-gnutls-dev libxml2-dev libpq-dev libfreetype6-dev nano less vim php-pear
 #RUN apt-get install -y php-pear
 RUN apt-get clean
 RUN docker-php-ext-configure ldap 
