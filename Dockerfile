@@ -15,6 +15,8 @@ RUN docker-php-ext-install opcache intl dom pdo pdo_mysql pdo_pgsql
 
 RUN git clone https://github.com/partkeepr/PartKeepr.git
 
+RUN ls -ls
+
 RUN cp app/config/parameters.php.dist  app/config/parameters.php
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
